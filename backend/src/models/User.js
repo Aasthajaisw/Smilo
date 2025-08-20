@@ -52,7 +52,6 @@ isOnboarded:{
 //cretaedAt,updatedAd
 //member since createdAt
 
-const User=mongoose.model("User",userSchema);
 
 //pre hook    hash the data(unreadable form )
 
@@ -70,6 +69,10 @@ userSchema.pre("save",async function(next){
     }catch(error){
 
     }
-})
+});
+
+const User=mongoose.model("User",userSchema);
+
+
 
 export default User;
